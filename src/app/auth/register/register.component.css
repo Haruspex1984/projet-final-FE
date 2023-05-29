@@ -1,0 +1,14 @@
+.stepper-class{
+  display: flex;
+  justify-content: center;
+}
+
+.submit{
+  display: flex;
+  margin: auto;
+}
+
+.error{
+  display: flex;
+  justify-content: center;
+}
