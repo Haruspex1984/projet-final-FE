@@ -1,5 +1,5 @@
 import {Component, OnChanges, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {UserService} from "../../shared/services/user/user.service";
 import {User} from "../../shared/models/User";
 import {Observable} from "rxjs";
@@ -10,23 +10,23 @@ import {LoginService} from "../../shared/services/login/login.service";
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
-export class ProfileComponent implements OnInit{
-  user? : User
-  isAdmin : boolean = false;
-  constructor(private route : ActivatedRoute, private service : LoginService) {
+export class ProfileComponent implements OnInit {
+  user?: User
+  isAdmin: boolean = false;
 
+  constructor(private route: ActivatedRoute, private service: LoginService, private router: Router) {
   }
 
-
-
-  getUser(){
+  getUser() {
     const username = this.route.snapshot.params['username']
-    this.service.getUser(username).subscribe({next : value => {
-      this.user = value
+    this.service.getUser(username).subscribe({
+      next: value => {
+        this.user = value
       }
 
     })
   }
+
   ngOnInit(): void {
     this.getUser()
     const username = this.route.snapshot.params['username']
@@ -34,10 +34,8 @@ export class ProfileComponent implements OnInit{
     this.service.isAdmin$.subscribe(isAdmin => {
       this.isAdmin = isAdmin;
     });
+
   }
-
-
-
 
 
 }

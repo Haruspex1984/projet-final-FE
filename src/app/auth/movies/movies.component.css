@@ -1,0 +1,12 @@
+mat-card img{
+max-width: fit-content;
+}
+
+mat-card{
+
+  max-width: 15%;
+}
+
+li{list-style-type: none}
+
+

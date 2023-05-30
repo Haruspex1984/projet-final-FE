@@ -13,6 +13,7 @@ import {UserResolver} from "./shared/services/resolvers/user.resolver";
 import {AdminComponent} from "./auth/admin/admin.component";
 import {SuccessfulRegisterComponent} from "./auth/successful-register/successful-register.component";
 
+
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'admin',component:AdminComponent},

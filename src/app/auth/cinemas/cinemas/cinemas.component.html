@@ -1,1 +1,20 @@
-<p>cinemas works!</p>
+<ul>
+  <li *ngFor="let cinema of cinemas">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{cinema.name}}</mat-card-title>
+        <mat-card-subtitle>{{cinema.address}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-xl-image src="{{cinema.imageURL}}" alt="cinema">
+      <mat-card-content>
+        <p>Nombre de salles : {{cinema.roomsQuantity}}</p>
+        <p>Prix de base : {{cinema.defaultPrice}}€</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Voir les séances</button>
+        <button mat-button>Contact</button>
+      </mat-card-actions>
+    </mat-card>
+  </li>
+
+</ul>
