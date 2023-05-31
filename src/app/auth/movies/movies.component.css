@@ -1,12 +1,19 @@
-mat-card img{
-max-width: fit-content;
+ul{
+  display: flex;
+  justify-content: center;
+}
+
+li{
+  list-style: none;
 }
 
 mat-card{
-
-  max-width: 15%;
+  width: 50%;
 }
 
-li{list-style-type: none}
-
-
+mat-card img{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+width: 50%;
+}

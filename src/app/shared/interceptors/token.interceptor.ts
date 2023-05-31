@@ -33,7 +33,6 @@ export class TokenInterceptor implements HttpInterceptor {
         })
       )
     }
-    console.log("ICI")
     return next.handle(request)
 
   }

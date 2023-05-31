@@ -1,11 +1,12 @@
 mat-card{
-  width: fit-content;
+  max-width: fit-content;
   padding: 0.5%;
 }
 
 mat-card img{
   margin-top: 5%;
   margin-bottom: 5%;
+  width: fit-content;
 }
 
 li{

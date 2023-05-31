@@ -4,7 +4,7 @@
   <a mat-raised-button routerLink="movies">Films à l'affiche</a>
   <a mat-raised-button [routerLink]="['/profile', loggedUser?.username]" *ngIf="isUserLogged">Mon profil</a>
   <a mat-raised-button routerLink="admin" *ngIf="isAdmin">Gestion du site</a>
-  <a mat-raised-button routerLink="login" [disabled]="isUserLogged">Se connecter/S'enregistrer</a>
-  <a mat-raised-button (click)="logout()" [disabled]="!isUserLogged">Se déconnecter</a>
+  <a mat-raised-button routerLink="login" *ngIf="!isUserLogged">Se connecter/S'enregistrer</a>
+  <a mat-raised-button (click)="logout()" *ngIf="isUserLogged">Se déconnecter</a>
 </nav>
 <router-outlet></router-outlet>

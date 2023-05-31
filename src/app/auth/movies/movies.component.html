@@ -12,7 +12,7 @@
         <p>Synopsis : {{movie.description}}</p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button>Voir les séances</button>
+        <a mat-button routerLink="../session/movie/{{movie.id}}">Voir les séances</a>
       </mat-card-actions>
     </mat-card>
   </li>

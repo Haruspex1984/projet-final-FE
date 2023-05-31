@@ -1,0 +1,9 @@
+<h1>Prochaines séances au {{cinema?.name}}</h1>
+
+<ul>
+
+  <li *ngFor="let session of sessions">
+    <p>{{session.dateTime|date:'short'}}</p>
+    <p>{{session.movieDTO.title}}</p>
+  </li>
+</ul>

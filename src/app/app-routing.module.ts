@@ -12,6 +12,8 @@ import {UsernameGuard} from "./shared/services/username.guard";
 import {UserResolver} from "./shared/services/resolvers/user.resolver";
 import {AdminComponent} from "./auth/admin/admin.component";
 import {SuccessfulRegisterComponent} from "./auth/successful-register/successful-register.component";
+import {SessionComponent} from "./auth/session/session.component";
+import {SessionMovieComponent} from "./auth/session-movie/session-movie.component";
 
 
 const routes: Routes = [
@@ -22,7 +24,10 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
   {path:'cinemas',component:CinemasComponent},
-  {path:'movies',component:MoviesComponent}
+  {path:'movies',component:MoviesComponent},
+  {path:'session/cinema/:cinemaId',component:SessionComponent},
+  {path:'session/movie/:movieId',component:SessionMovieComponent}
+
 ];
 
 @NgModule({

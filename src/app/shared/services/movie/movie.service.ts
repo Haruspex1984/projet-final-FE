@@ -13,5 +13,11 @@ export class MovieService {
     return this.http.get("http://localhost:8080/movies/all")
   }
 
+  getOne(movieId : number): Observable<any>{
+    return this.http.get(`http://localhost:8080/movies/${movieId}`)
+  }
+
+
+
 
 }

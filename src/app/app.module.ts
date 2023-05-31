@@ -20,6 +20,8 @@ import {MatCardModule} from "@angular/material/card";
 import { AdminComponent } from './auth/admin/admin.component';
 import {MatStepperModule} from "@angular/material/stepper";
 import { SuccessfulRegisterComponent } from './auth/successful-register/successful-register.component';
+import { SessionComponent } from './auth/session/session.component';
+import { SessionMovieComponent } from './auth/session-movie/session-movie.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { SuccessfulRegisterComponent } from './auth/successful-register/successf
     ProfileComponent,
     AdminComponent,
     SuccessfulRegisterComponent,
+    SessionComponent,
+    SessionMovieComponent,
   ],
     imports: [
         BrowserModule,
