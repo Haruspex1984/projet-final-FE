@@ -4,3 +4,17 @@ h1{
   font-size: 4em;
   margin-top: 2%;
 }
+
+img{
+  display: flex;
+  margin: auto;
+  width: 500px;
+  border : 20px solid gold;
+  border-radius: 20px;
+
+}
+
+h2{
+  display: flex;
+  justify-content: center;
+}

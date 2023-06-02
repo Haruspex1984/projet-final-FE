@@ -1,0 +1,9 @@
+<h1>Séances pour {{movie?.title}}</h1>
+<ul>
+  <li *ngFor="let session of sessions ">
+    <p>Date : {{session.dateTime|date:"dd/MM à HH'h'mm"}}</p>
+    <p>Cinéma : {{session.cinemaDTO.name}}</p>
+    <p>Salle N°{{session.roomNumber}}</p>
+    <p>Places disponibles : {{session.remainingSeats}}</p>
+  </li>
+</ul>
