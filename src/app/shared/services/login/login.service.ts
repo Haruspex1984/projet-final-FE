@@ -4,6 +4,7 @@ import {LoginForm} from "../../forms/loginForm";
 import {HttpClient} from "@angular/common/http";
 import {User} from "../../models/User";
 import {RegisterForm} from "../../forms/RegisterForm";
+import {env} from "../../../../env";
 
 
 
@@ -17,6 +18,11 @@ export class LoginService {
   private currentUser : User | undefined;
   private isUserLogged : boolean = false;
   private userSubject: BehaviorSubject<User | undefined> = new BehaviorSubject<User | undefined>(undefined);
+
+  private readonly BASE_URL = `http://${env.server_host}:8080`
+
+
+
   constructor(private http: HttpClient) {
   }
 
@@ -57,11 +63,11 @@ export class LoginService {
 
 
   login(loginForm: LoginForm): Observable<any> {
-    return this.http.post("http://localhost:8080/auth/login", loginForm);
+    return this.http.post(this.BASE_URL+"/auth/login", loginForm);
   }
 
   register(registerForm : RegisterForm) : Observable<any>{
-    return this.http.post("http://localhost:8080/auth/register",registerForm)
+    return this.http.post(this.BASE_URL+"/auth/register",registerForm)
   }
 
 
@@ -89,7 +95,7 @@ export class LoginService {
   }
 
   getUser(username: string | null): Observable<any> {
-      return this.http.get(`http://localhost:8080/user/${username}`);
+      return this.http.get(this.BASE_URL+`/user/${username}`);
 
   }
 }
